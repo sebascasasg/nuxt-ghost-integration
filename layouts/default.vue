@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <Nuxt />
+    <Nuxt class="padding" />
   </div>
 </template>
 
@@ -15,5 +15,8 @@
 }
 body {
   background-color: #eeeeee;
+}
+.padding {
+  padding: 2rem 0 7rem;
 }
 </style>
