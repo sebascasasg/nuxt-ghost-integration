@@ -1,11 +1,13 @@
 <template>
   <main class="container">
-    <h1 class="title">Experimenta</h1>
+    <h1 class="title">Descubre</h1>
     <p class="snippet">
-      Hacemos, cada uno, a nuestro ritmo. Creamos, construimos, jugamos. Solos y
-      con el otro. Hacemos para nosotros, también para compartir. Para retarnos,
-      conversar y conocernos. En la mínima acción de vivir nos relacionamos con
-      el mundo.
+      El ocio es creativo, por definición. Hemos dedicado buena parte de nuestro
+      ingenio a la difícil tarea del disfrute. Detrás de cada forma de
+      entretenernos hay una buena cantidad de ciencia y conocimiento: el libro,
+      la televisión, el internet… el computador, la cámara, la guitarra. En esta
+      sección, queremos compartir pretextos para el ocio, el goce y la
+      inspiración.
     </p>
     <div class="posts-container">
       <PostCard
@@ -14,7 +16,7 @@
         :title="post.title"
         :image="post.feature_image"
         :excerpt="post.excerpt"
-        :link="`/en-casa/experimenta/${post.slug}`"
+        :link="`/en-casa/descubre/${post.slug}`"
       />
     </div>
   </main>
@@ -24,7 +26,7 @@
 import { getPostsByTag } from "~/api/posts";
 export default {
   async asyncData() {
-    const posts = await getPostsByTag("experimenta");
+    const posts = await getPostsByTag("descubre");
     return { posts: posts };
   },
 };
