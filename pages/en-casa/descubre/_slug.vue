@@ -8,12 +8,11 @@
 <script>
 import { getSinglePost } from "~/api/posts";
 export default {
-  async asyncData({ params }) {
-    const post = await getSinglePost(params.slug);
-    return { post: post };
-  },
+  async asyncData(context) {
+    const post = await getSinglePost(context.params.slug);
+    return { post };
+  }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
